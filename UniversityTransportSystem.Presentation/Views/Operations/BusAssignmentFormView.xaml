@@ -1,0 +1,95 @@
+<UserControl x:Class="UniversityTransportSystem.Presentation.Views.Operations.BusAssignmentFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             RenderTransformOrigin="0.5,0.5">
+    <UserControl.RenderTransform>
+        <TranslateTransform X="0" Y="0"/>
+    </UserControl.RenderTransform>
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnBack" Content="← Back" Style="{StaticResource SecondaryActionButtonStyle}" Height="36" Width="100" Click="BtnBack_Click" Margin="0,0,16,0"/>
+            <TextBlock Grid.Column="1" Text="Bus Assignment Form" Style="{StaticResource HeaderTitleStyle}" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Border Grid.Row="1" Style="{StaticResource GlassCardStyle}" Padding="28" MaxWidth="600" HorizontalAlignment="Left">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Margin="0,0,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="BusID" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Grid.Row="1" x:Name="txtBusID" Style="{StaticResource TextBoxStyle}"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0,0,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="TransportLineID" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Grid.Row="1" x:Name="txtTransportLineID" Style="{StaticResource TextBoxStyle}"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0,0,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="StartDate" Style="{StaticResource LabelStyle}"/>
+                    <DatePicker Grid.Row="1" x:Name="dpStartDate" Style="{StaticResource DatePickerStyle}"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Margin="0,0,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="EndDate" Style="{StaticResource LabelStyle}"/>
+                    <DatePicker Grid.Row="1" x:Name="dpEndDate" Style="{StaticResource DatePickerStyle}"/>
+                </Grid>
+
+                <Grid Grid.Row="4" Margin="0,0,0,16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="AssignmentStatus" Style="{StaticResource LabelStyle}"/>
+                    <ComboBox Grid.Row="1" x:Name="cmbStatus" Style="{StaticResource ComboBoxStyle}" ItemContainerStyle="{StaticResource ComboBoxItemStyle}">
+                        <ComboBoxItem Content="Active" IsSelected="True"/>
+                        <ComboBoxItem Content="Inactive"/>
+                    </ComboBox>
+                </Grid>
+
+                <Grid Grid.Row="5" Margin="0,8,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" x:Name="btnSave" Content="Save" Style="{StaticResource ActionButtonStyle}" Click="BtnSave_Click" Width="110" Margin="0,0,8,0"/>
+                    <Button Grid.Column="1" x:Name="btnUpdate" Content="Update" Style="{StaticResource ActionButtonStyle}" Click="BtnUpdate_Click" Width="110" Margin="0,0,8,0" Visibility="Collapsed"/>
+                    <Button Grid.Column="2" x:Name="btnCancel" Content="Cancel" Style="{StaticResource SecondaryActionButtonStyle}" Click="BtnCancel_Click" Width="110"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

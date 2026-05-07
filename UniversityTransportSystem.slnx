@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="UniversityTransportSystem.Business/UniversityTransportSystem.Business.csproj" />
+  <Project Path="UniversityTransportSystem.DataAccess/UniversityTransportSystem.DataAccess.csproj" />
+  <Project Path="UniversityTransportSystem.Presentation/UniversityTransportSystem.Presentation.csproj" />
+</Solution>

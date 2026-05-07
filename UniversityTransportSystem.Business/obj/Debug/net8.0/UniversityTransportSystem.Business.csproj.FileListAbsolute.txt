@@ -1,0 +1,11 @@
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\bin\Debug\net8.0\UniversityTransportSystem.Business.deps.json
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\bin\Debug\net8.0\UniversityTransportSystem.Business.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\bin\Debug\net8.0\UniversityTransportSystem.Business.pdb
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\refint\UniversityTransportSystem.Business.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\UniversityTransportSystem.Business.pdb
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.Business\obj\Debug\net8.0\ref\UniversityTransportSystem.Business.dll

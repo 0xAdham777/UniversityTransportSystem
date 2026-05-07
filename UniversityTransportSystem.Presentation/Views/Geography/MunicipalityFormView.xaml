@@ -1,0 +1,35 @@
+<UserControl x:Class="UniversityTransportSystem.Presentation.Views.Geography.MunicipalityFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.RenderTransform>
+        <TranslateTransform/>
+    </UserControl.RenderTransform>
+    <Grid>
+        <Border Style="{StaticResource GlassCardStyle}" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="24,20,24,16">
+                    <TextBlock Text="Municipality Form" Style="{StaticResource HeaderTitleStyle}"/>
+                </Grid>
+                <StackPanel Grid.Row="1" Margin="24,0,24,0">
+                    <TextBlock Text="Wilaya ID" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="WilayaIdTextBox" Style="{StaticResource TextBoxStyle}" Margin="0,0,0,16"/>
+                    <TextBlock Text="Municipality Name" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="MunicipalityNameTextBox" Style="{StaticResource TextBoxStyle}" Margin="0,0,0,16"/>
+                    <TextBlock Text="Postal Code" Style="{StaticResource LabelStyle}"/>
+                    <TextBox x:Name="PostalCodeTextBox" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="24,16,24,20">
+                    <Button Content="Back" Style="{StaticResource SecondaryActionButtonStyle}" Click="BackButton_Click" Margin="0,0,8,0"/>
+                    <Button Content="Save" Style="{StaticResource ActionButtonStyle}" Click="SaveButton_Click" Margin="0,0,8,0"/>
+                    <Button Content="Clear" Style="{StaticResource DangerButtonStyle}" Click="ClearButton_Click" Margin="0,0,8,0"/>
+                    <Button Content="Cancel" Style="{StaticResource DangerButtonStyle}" Click="CancelButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

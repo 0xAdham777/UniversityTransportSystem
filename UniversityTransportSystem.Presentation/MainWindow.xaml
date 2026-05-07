@@ -1,0 +1,378 @@
+<Window x:Class="UniversityTransportSystem.Presentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="University Transport System"
+        Width="1640"
+        Height="920"
+        WindowState="Maximized"
+        WindowStyle="None"
+        AllowsTransparency="False"
+        Background="Transparent"
+        RenderTransformOrigin="0.5,0.5">
+    <Window.RenderTransform>
+        <ScaleTransform ScaleX="1" ScaleY="1"/>
+    </Window.RenderTransform>
+    <Window.Resources>
+        <Storyboard x:Key="PageSlideStoryboard">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.35">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)" From="30" To="0" Duration="0:0:0.35">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>
+    <Border x:Name="WindowBorder"
+            Background="#0C1429"
+            CornerRadius="30"
+            Effect="{StaticResource CardShadow}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="320"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ===== SIDEBAR ===== -->
+            <Border Grid.Column="0"
+                    Background="{StaticResource SidebarBackgroundBrush}"
+                    CornerRadius="30,0,0,30">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Logo / Brand -->
+                    <Border Grid.Row="0"
+                            Margin="20,30,20,20"
+                            Background="{StaticResource TransparentBrush}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0"
+                                    Width="56"
+                                    Height="56"
+                                    CornerRadius="14"
+                                    Background="{StaticResource PrimaryButtonBrush}"
+                                    Effect="{StaticResource GoldGlowShadow}"
+                                    HorizontalAlignment="Left"
+                                    Margin="0,0,0,12">
+                                <TextBlock Text="UT"
+                                          FontSize="22"
+                                          FontWeight="Bold"
+                                          Foreground="#0C1429"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                            </Border>
+                            <TextBlock Grid.Row="1"
+                                       Text="UNIVERSITY"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource AccentBrush}"
+                                       Margin="0,0,0,2"/>
+                            <TextBlock Grid.Row="2"
+                                       Text="Transport System"
+                                       FontSize="22"
+                                       FontWeight="Bold"
+                                       Foreground="{StaticResource WhiteBrush}"/>
+                            <TextBlock Grid.Row="3"
+                                       Text="Elite Transport Management"
+                                       FontSize="11"
+                                       Foreground="{StaticResource MutedTextBrush}"
+                                       Margin="0,2,0,0"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Navigation -->
+                    <ScrollViewer Grid.Row="1"
+                                  Style="{StaticResource ScrollViewerStyle}">
+                        <StackPanel Margin="8,0,8,0">
+
+                            <!-- PEOPLE -->
+                            <TextBlock Text="PEOPLE"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <Button x:Name="btnPerson"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnPerson_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="👤" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Person" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnStudent"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnStudent_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🎓" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Student" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnEmployee"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnEmployee_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="💼" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Employee" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnDriver"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnDriver_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚌" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Driver" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <!-- ACADEMIC -->
+                            <TextBlock Text="ACADEMIC"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <Button x:Name="btnDepartment"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnDepartment_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🏛️" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Department" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnSpeciality"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnSpeciality_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="📚" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Speciality" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <!-- GEOGRAPHY -->
+                            <TextBlock Text="GEOGRAPHY"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <Button x:Name="btnWilaya"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnWilaya_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🗺️" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Wilaya" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnMunicipality"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnMunicipality_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🏙️" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Municipality" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnStation"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnStation_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚏" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Station" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <!-- TRANSPORT -->
+                            <TextBlock Text="TRANSPORT"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <Button x:Name="btnBusModel"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnBusModel_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚍" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Bus Model" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnBus"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnBus_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚌" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Bus" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnTransportLine"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnTransportLine_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🛤️" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Transport Line" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnLineStation"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnLineStation_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="📍" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Line Station" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnSchedule"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnSchedule_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="📅" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Schedule" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+
+                            <!-- OPERATIONS -->
+                            <TextBlock Text="OPERATIONS"
+                                       Style="{StaticResource SectionTitleStyle}"/>
+                            <Button x:Name="btnSubscription"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnSubscription_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="📋" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Subscription" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnPayment"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnPayment_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="💳" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Payment" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnBusAssignment"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnBusAssignment_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🔄" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Bus Assignment" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnTrip"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnTrip_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚀" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Trip" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnAttendance"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnAttendance_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="✅" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Attendance" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnIncidentType"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnIncidentType_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="⚠️" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Incident Type" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:Name="btnIncident"
+                                    Style="{StaticResource SidebarButtonStyle}"
+                                    Click="BtnIncident_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="🚨" FontSize="16" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Incident" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <!-- User Profile (Bottom) -->
+                    <Border Grid.Row="2"
+                            Margin="12,8,12,16"
+                            Style="{StaticResource ProfileCardStyle}">
+                        <Grid Margin="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0"
+                                    Width="40"
+                                    Height="40"
+                                    CornerRadius="10"
+                                    Background="{StaticResource PrimaryButtonBrush}"
+                                    Margin="0,0,10,0">
+                                <TextBlock Text="AU"
+                                          FontSize="14"
+                                          FontWeight="Bold"
+                                          Foreground="#0C1429"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                            </Border>
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="Admin User"
+                                          FontSize="13"
+                                          FontWeight="SemiBold"
+                                          Foreground="{StaticResource WhiteBrush}"/>
+                                <TextBlock Text="Administrator"
+                                          FontSize="11"
+                                          Foreground="{StaticResource MutedTextBrush}"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!-- ===== CONTENT AREA ===== -->
+            <Grid Grid.Column="1"
+                  Background="{StaticResource WindowBackgroundBrush}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Top Bar -->
+                <Border Grid.Row="0"
+                        Background="{StaticResource TransparentBrush}"
+                        Height="70"
+                        Padding="28,0,28,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Page Title -->
+                        <TextBlock Grid.Column="0"
+                                   x:Name="PageTitle"
+                                   Text="University Transport Management"
+                                   Style="{StaticResource HeaderTitleStyle}"
+                                   VerticalAlignment="Center"/>
+
+                        <!-- Top Right Controls -->
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center">
+                            <TextBox x:Name="SearchBox"
+                                     Style="{StaticResource SearchBoxStyle}"
+                                     TextChanged="SearchBox_TextChanged"/>
+                            <Button x:Name="btnExit"
+                                    Style="{StaticResource ExitButtonStyle}"
+                                    Click="BtnExit_Click"
+                                    Margin="12,0,0,0"
+                                    Content="✕"
+                                    FontSize="18"
+                                    FontWeight="Bold"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Navigation Frame -->
+                <Frame Grid.Row="1"
+                       x:Name="MainFrame"
+                       Style="{StaticResource NavigationFrameStyle}"
+                       Margin="24,0,24,24"
+                       Navigated="MainFrame_Navigated"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

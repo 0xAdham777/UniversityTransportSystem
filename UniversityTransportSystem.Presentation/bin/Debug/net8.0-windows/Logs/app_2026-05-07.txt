@@ -1,0 +1,16 @@
+[2026-05-07 20:13:06] [INFO] Inserted Person with ID=4
+[2026-05-07 20:13:40] [INFO] Inserted Person with ID=5
+[2026-05-07 20:30:25] [INFO] Inserted Person with ID=6
+[2026-05-07 21:36:22] [INFO] Inserted IncidentType with ID=1
+[2026-05-07 21:47:32] [INFO] Deleted Person ID=6, result=True
+[2026-05-07 21:47:36] [INFO] Deleted Person ID=5, result=True
+[2026-05-07 21:47:40] [INFO] Deleted Person ID=4, result=True
+[2026-05-07 22:02:26] [INFO] Deleted IncidentType ID=1, result=True
+[2026-05-07 22:02:34] [INFO] Deleted Person ID=3, result=True
+[2026-05-07 22:31:00] [INFO] Deleted Person ID=2, result=False
+[2026-05-07 22:31:05] [INFO] Deleted Person ID=1, result=False
+[2026-05-07 23:22:03] [INFO] Inserted Student with ID=22
+[2026-05-07 23:22:17] [INFO] Deleted Student ID=22, result=True
+[2026-05-07 23:42:32] [INFO] Inserted Person with ID=29
+[2026-05-07 23:43:12] [INFO] Updated Person, result=True
+[2026-05-07 23:44:15] [INFO] Inserted Student with ID=23

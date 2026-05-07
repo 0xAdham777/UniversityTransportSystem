@@ -1,0 +1,107 @@
+<UserControl x:Class="UniversityTransportSystem.Presentation.Views.People.EmployeeFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             RenderTransformOrigin="0.5,0.5"
+             Loaded="UserControl_Loaded">
+    <UserControl.RenderTransform>
+        <TranslateTransform X="0" Y="20"/>
+    </UserControl.RenderTransform>
+    <UserControl.Resources>
+        <Storyboard x:Key="PageEnter">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.3"/>
+            <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)" From="20" To="0" Duration="0:0:0.3">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+    <Grid Margin="28,0,28,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,8,0,24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnBack" Content="← Back" Style="{StaticResource SecondaryActionButtonStyle}" Height="36" Width="100" Click="BtnBack_Click" Margin="0,0,16,0"/>
+            <TextBlock Grid.Column="1" Text="Employee Form" Style="{StaticResource HeaderTitleStyle}" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="380"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Style="{StaticResource CardContentStyle}" Margin="0,0,12,0">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="EMPLOYEE INFORMATION" Style="{StaticResource SectionTitleStyle}" Margin="0,0,0,12"/>
+
+                    <StackPanel Grid.Row="1" Margin="0,0,0,14">
+                        <TextBlock Text="Person ID" Style="{StaticResource LabelStyle}"/>
+                        <TextBox x:Name="txtPersonID" Style="{StaticResource TextBoxStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Margin="0,0,0,14">
+                        <TextBlock Text="Hire Date" Style="{StaticResource LabelStyle}"/>
+                        <DatePicker x:Name="dpHireDate" Style="{StaticResource DatePickerStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3" Margin="0,0,0,14">
+                        <TextBlock Text="Employee Status" Style="{StaticResource LabelStyle}"/>
+                        <ComboBox x:Name="cmbEmployeeStatus" Style="{StaticResource ComboBoxStyle}" ItemContainerStyle="{StaticResource ComboBoxItemStyle}">
+                            <ComboBoxItem Content="Active"/>
+                            <ComboBoxItem Content="Inactive"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" Style="{StaticResource GlassCardStyle}">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="PREVIEW" Style="{StaticResource SectionTitleStyle}" Margin="0,0,0,16"/>
+                    <Border Grid.Row="1"
+                            Width="80" Height="80"
+                            CornerRadius="40"
+                            Background="{StaticResource PrimaryButtonBrush}"
+                            HorizontalAlignment="Center"
+                            Effect="{StaticResource GoldGlowShadow}"
+                            Margin="0,0,0,16">
+                        <TextBlock x:Name="txtPreviewIcon" Text="E" FontSize="32" FontWeight="Bold" Foreground="#0C1429" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <StackPanel Grid.Row="1" Margin="0,96,0,0">
+                        <TextBlock x:Name="txtPreviewStatus" Text="Employee Status" FontSize="16" FontWeight="SemiBold" Foreground="#FFFFFF" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                        <Border x:Name="badgeStatus" Style="{StaticResource StatusBadgeStyle}" HorizontalAlignment="Center">
+                            <TextBlock x:Name="txtBadgeStatus" Text="--" FontSize="11" FontWeight="Bold" Foreground="#FFFFFF" HorizontalAlignment="Center"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Margin="0,16,0,16" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="btnSave" Content="Save" Style="{StaticResource ActionButtonStyle}" Width="110" Margin="0,0,8,0" Click="BtnSave_Click"/>
+                <Button x:Name="btnUpdate" Content="Update" Style="{StaticResource ActionButtonStyle}" Width="110" Margin="0,0,8,0" Click="BtnUpdate_Click" Visibility="Collapsed"/>
+                <Button x:Name="btnClear" Content="Clear" Style="{StaticResource SecondaryActionButtonStyle}" Width="100" Margin="0,0,8,0" Click="BtnClear_Click"/>
+                <Button x:Name="btnCancel" Content="Cancel" Style="{StaticResource DangerButtonStyle}" Width="100" Click="BtnCancel_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

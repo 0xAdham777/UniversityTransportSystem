@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\bin\Debug\net8.0\UniversityTransportSystem.DataAccess.deps.json
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\bin\Debug\net8.0\UniversityTransportSystem.DataAccess.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\bin\Debug\net8.0\UniversityTransportSystem.DataAccess.pdb
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\bin\Debug\net8.0\UniversityTransportSystem.Business.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\bin\Debug\net8.0\UniversityTransportSystem.Business.pdb
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\Universi.77F30DAA.Up2Date
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\refint\UniversityTransportSystem.DataAccess.dll
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\UniversityTransportSystem.DataAccess.pdb
+C:\Users\ASUS\Desktop\UniversityTransportSystem_FullProject_BDD\UniversityTransportSystem.DataAccess\obj\Debug\net8.0\ref\UniversityTransportSystem.DataAccess.dll
